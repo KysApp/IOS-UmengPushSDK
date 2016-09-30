@@ -1,13 +1,13 @@
 #IOS集成UmengPushDemo
 ###1.安装 UMengMessage SDK
-` Podfile:
+```Podfile:
 	platform :ios, '7.0'
 	source 'https://github.com/CocoaPods/Specs.git'
 	inhibit_all_warnings!
 	target 'ReflectTest' do
     pod 'iOS-UMengMessage', '~> 1.2.5'
-	end
-	`
+    end
+```
 ###2.初始化UmengPush
 * 在AppDelegate.m中引入UMessagePushUtil.h: import "UMessagePushUtil.h"
 * 在` - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions `中调用` [[UMessagePushUtil SharedUMPushUtil] initWithUmengAppKey:umengAppId storyboardName:@"Main" launchOptions:launchOptions];`umengAppId为友盟的AppKey,storyboardName为故事板名字。
