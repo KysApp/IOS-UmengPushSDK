@@ -37,7 +37,7 @@
 		@property (weak, nonatomic) IBOutlet UILabel *_tockenLabel;
 		@property (weak, nonatomic) IBOutlet UILabel *_ageLabel;
 		-(void) updateWithModel:(UserModel*)model;
-@end
+	@end
 ```
 
 参数 | 说明 | 
