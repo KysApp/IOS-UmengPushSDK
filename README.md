@@ -24,7 +24,7 @@
 * key: data
 * value:`{"class":"CustomerVC","instancefrom":"storyboard","method":"updateWithModel","propertys":{"type":"model","modelname":"UserModel","value":{"_name":"用户01","_tocken":"010","_age":25}}} `
 
-* ``` 
+``` 
 	示例模型：
 	@interface UserModel : NSObject
 		@property(nonatomic,retain) NSString *_name;
