@@ -13,7 +13,7 @@
 * 在` - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions `中调用` [[UMessagePushUtil SharedUMPushUtil] initWithUmengAppKey:umengAppId storyboardName:@"Main" launchOptions:launchOptions];`umengAppId为友盟的AppKey,storyboardName为故事板名字。
 
 ###3.设置别名
-* 则在 ` - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken `中添加` [[UMessagePushUtil SharedUMPushUtil] didRegisterForRemoteNotifications:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken aliasName:aliasName aliasType:aliasType];`aliasType为别名类型，aliasName为别名。
+* 在 ` - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken `中添加` [[UMessagePushUtil SharedUMPushUtil] didRegisterForRemoteNotifications:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken aliasName:aliasName aliasType:aliasType];`aliasType为别名类型，aliasName为别名。
 
 ###4.跳转页面设置
 * 在所有需要跳转的ViewController引入UIViewController+PushInfo.h: ` import "UIViewController+PushInfo.h" `
