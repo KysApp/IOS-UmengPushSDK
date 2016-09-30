@@ -26,8 +26,6 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
     //set AppKey and LaunchOptions
     [UMessage startWithAppkey:umAppKey launchOptions:opts];
     [UMessage setAutoAlert:NO];
-//    [UMessage debu]
-    //    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= _IPHONE80_
     if(UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
     {
@@ -59,18 +57,14 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
          |UIRemoteNotificationTypeAlert];
     }
 #else
-    
-    //register remoteNotification types
     [UMessage registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge
      |UIRemoteNotificationTypeSound
      |UIRemoteNotificationTypeAlert];
     
 #endif
-    //UIApplicationLaunchOptionsRemoteNotificationKey
     NSDictionary *userInfo = (NSDictionary*)opts[UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo != nil){
         self._userInfo = userInfo;
-//        [self jumpcenterWhenOpenApp];
     }
     
     //for log
@@ -78,13 +72,7 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
 }
 
 - (void) didRegisterForRemoteNotifications:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken aliasName: (NSString*)alias aliasType:(NSString*)type{
-    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                  stringByReplacingOccurrencesOfString: @">" withString: @""]
-                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
     [UMessage registerDeviceToken:deviceToken];
-    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
-                  stringByReplacingOccurrencesOfString: @">" withString: @""]
-                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
     if(alias != nil && type != nil){
         [self addAlias:alias aliasType:type];
     }
