@@ -191,7 +191,7 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
      * key: data
      * value: {"class":"UserViewController","instancefrom":"storyboard or code","method":"updateWithMode","propertys":{"type":"string or number or dict or array or model","value":"100 or \"stringvalue\" or {"key1":"value1","key2":"value2"} or ["v1","v2"] {"tocken":"akleiur8249","isvip":false}"},"modelname":"UserModel"}
      
-     {"class":"CustomerVC","instancefrom":"storyboard","method":"updateWithModel","modelname":"UserModel","propertys":{"type":"model","modelname":"UserModel","value":{"_name":"用户01","_tocken":"010","_age":25}}}
+     {"class":"CustomerVC","instancefrom":"storyboard","method":"updateWithModel","propertys":{"type":"model","modelname":"UserModel","value":{"_name":"用户01","_tocken":"010","_age":25}}}
      
      */
     

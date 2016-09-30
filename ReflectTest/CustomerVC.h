@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewController+PushInfo.h"
-//#import "UMessagePushUtil.h"
+
 @interface UserModel : NSObject
 @property(nonatomic,retain) NSString *_name;
 @property(nonatomic,retain) NSString *_tocken;

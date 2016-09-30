@@ -18,7 +18,8 @@
     Class alertClass = [UIAlertController class];
     Class _alertClass = NSClassFromString(@"_UIAlertShimPresentingViewController");
     Class followingControllerClass = NSClassFromString(@"UIApplicationRotationFollowingController");
-    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass){
+    Class windowClass2 = NSClassFromString(@"UIWindow");
+    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass || selfClass == windowClass2){
         return;
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SET_CUR_VC" object:self];
@@ -32,7 +33,8 @@
     Class alertClass = [UIAlertController class];
     Class _alertClass = NSClassFromString(@"_UIAlertShimPresentingViewController");
     Class followingControllerClass = NSClassFromString(@"UIApplicationRotationFollowingController");
-    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass){
+    Class windowClass2 = NSClassFromString(@"UIWindow");
+    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass || selfClass == windowClass2){
         return;
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SET_CUR_VC" object:self];
@@ -47,7 +49,8 @@
     Class alertClass = [UIAlertController class];
     Class _alertClass = NSClassFromString(@"_UIAlertShimPresentingViewController");
     Class followingControllerClass = NSClassFromString(@"UIApplicationRotationFollowingController");
-    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass){
+    Class windowClass2 = NSClassFromString(@"UIWindow");
+    if(selfClass == tabClass || selfClass == navClass || selfClass == inputClass || selfClass == windowClass || selfClass == alertClass || selfClass == _alertClass || selfClass == followingControllerClass || selfClass == windowClass2){
         return;
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SET_CUR_VC" object:nil];
