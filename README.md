@@ -1,8 +1,5 @@
 # IOS-UmengPushSDK
 IOS集成UmengPushDemo
-
-
-
 1.安装 UMengMessage SDK
 Podfile:
 	platform :ios, '7.0'
