@@ -46,5 +46,5 @@ class | 跳转到的目标页面  |
 instancefrom| storyboard：从故事板构造 code: 通过代码生成 |
 method| 目标页面赋值方法名 |
 propertys::type| 参数模型中参数类型，有number dict array model |
-propertys::value| ①type为number或dict或array时为响应数值(dict转为JSON串)，②type为model时为模型中字段和字段值组成的JSON串|
+propertys::value| ①type为number或dict或array时为相应数值(dict转为JSON串)，②type为model时为模型中字段和字段值组成的JSON串|
 propertys::modelname| 目标页面赋值时传递的模型名 | 
