@@ -21,7 +21,8 @@
 
 
 ###5.友盟传参示例：
-` {"class":"CustomerVC","instancefrom":"storyboard","method":"updateWithModel","propertys":{"type":"model","modelname":"UserModel","value":{"_name":"用户01","_tocken":"010","_age":25}}} `
+* key: data
+* value:`{"class":"CustomerVC","instancefrom":"storyboard","method":"updateWithModel","propertys":{"type":"model","modelname":"UserModel","value":{"_name":"用户01","_tocken":"010","_age":25}}} `
 
 参数 | 说明 | 
 ------------ | ------------- | 
