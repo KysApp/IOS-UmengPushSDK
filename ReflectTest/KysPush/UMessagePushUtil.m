@@ -203,7 +203,13 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
         subVC = [storyboard instantiateViewControllerWithIdentifier:className];
     }else if([@"code" isEqualToString:instancefrom]){ //通过代码实例化
         Class class = NSClassFromString(className);
+        if (nil == class){
+            return;
+        }
         subVC = [[class alloc] init];
+    }
+    if(subVC == nil){
+        return;
     }
     [subVC setHidesBottomBarWhenPushed:YES];
     [self._umUtilCurViewController.navigationController pushViewController:subVC animated:YES];
@@ -220,6 +226,9 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
         NSDictionary *modelParamDict = (NSDictionary*)propertysDict[@"value"];
         NSString *modelName = propertysDict[@"modelname"];
         Class modelClass = NSClassFromString(modelName);
+        if(nil == modelClass){
+            return;
+        }
         paramObj = [[modelClass alloc] init];
         [modelParamDict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             if ([paramObj respondsToSelector:NSSelectorFromString(key)]) {
@@ -229,6 +238,9 @@ static UMessagePushUtil *PUSHUTIL_INSTANCE = nil;
     }
     
     SEL selector = NSSelectorFromString([NSString stringWithFormat:@"%@:",method]);
+    if(nil == selector){
+        return;
+    }
     [subVC performSelector:selector withObject:paramObj afterDelay:0.5];
     self._userInfo = nil;
 }
